@@ -7,7 +7,7 @@ function Buy() {
     <div>
    <div className="hidden bg-white sm:block" aria-hidden="true">
         <div className="py-5">
-          <div className="border-t border-gray-200" />
+          <div className="border-t bg-white border-gray-200" />
         </div>
       </div>
 
