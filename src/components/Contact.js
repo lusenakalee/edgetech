@@ -47,6 +47,7 @@ function Contact() {
           </dl>
         </div>
       </div>
+      
       <svg
         className="absolute top-0 left-1/2 -z-10 h-[42.375rem] -translate-x-1/2 blur-3xl xl:-top-6"
         viewBox="0 0 1155 678"
@@ -71,6 +72,10 @@ function Contact() {
           </linearGradient>
         </defs>
       </svg>
+     
+    </div>
+    <div className="flex justify-end pr-10 text-xs">
+      <p className='text-white'>Site design by <a href='mailto:lusenakalee@gmail.com'>Leroy Lusenaka</a></p>
     </div>
 
 

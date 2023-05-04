@@ -12,7 +12,7 @@ function Home() {
     <div>
       {/* Hero */}
       <section className="et-hero-tabs">
-        <h1>EDGE TECHWORLD IT Solutions</h1>
+        <h1>EDGE TECHWORLD IT SOLUTIONS</h1>
         <h3>COMPUTER | LAPTOP | PHONE SOLUTIONS</h3>
         <div className="flex mb-8 pt-5  justify-center">
           <div className="relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-white hover:ring-gray-900/20">
