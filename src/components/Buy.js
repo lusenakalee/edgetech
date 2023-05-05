@@ -1,8 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Breadcrumbs } from "@material-tailwind/react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
+
 
 function Buy() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5dqrwks",
+        "template_idi44sc",
+        form.current,
+        "wLILNpMqLo0vim_Ko"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+
+
   return (
     <div>
    <div className="hidden bg-white sm:block" aria-hidden="true">
@@ -36,7 +65,7 @@ function Buy() {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+          <form ref={form} onSubmit={sendEmail}>
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
@@ -46,20 +75,20 @@ function Buy() {
                       </label>
                       <input
                         type="text"
-                        name="first-name"
+                        name="firstname"
                         placeholder='First Name'
                         className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
                     </div>
 
                     <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="lastname" className="block text-sm font-medium leading-6 text-gray-900">
                         Last name
                       </label>
                       <input
                         type="text"
-                        name="last-name"
-                        id="last-name"
+                        name="lastname"
+                        id="lastname"
                         placeholder='Surname'
                         className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
