@@ -1,8 +1,29 @@
 import React from 'react'
 import Map from './Map'
 import {HandRaisedIcon, CalendarDaysIcon, EnvelopeIcon, ChatBubbleOvalLeftIcon} from '@heroicons/react/20/solid';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_5dqrwks', 'template_099rsk9', form.current, 'wLILNpMqLo0vim_Ko')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+
+
+
+
+
+
   return (
     <div>
 

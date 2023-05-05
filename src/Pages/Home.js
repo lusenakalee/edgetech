@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/20/solid";
+import { HashLink } from "react-router-hash-link";
 
 function Home() {
   return (
@@ -28,15 +29,15 @@ function Home() {
         </div>
 
         <div className="et-hero-tabs-container">
-          <a className="et-hero-tab" href="#Laptops">
+          <HashLink className="et-hero-tab" smooth to="#Laptops">
             Laptops
-          </a>
-          <a className="et-hero-tab" href="#Mobiles">
+          </HashLink>
+          <HashLink className="et-hero-tab" smooth to="#Mobiles">
             Mobiles
-          </a>
-          <a className="et-hero-tab" href="#Contact">
+          </HashLink>
+          <HashLink className="et-hero-tab" smooth to="#Contact">
             Contact
-          </a>
+          </HashLink>
           
           <span className="et-hero-tab-slider" />
         </div>
