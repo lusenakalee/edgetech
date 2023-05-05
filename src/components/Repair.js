@@ -3,8 +3,12 @@ import { Breadcrumbs } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Repair() {
+  const notify = () => toast("Email successfully sent ");
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -69,9 +73,7 @@ function Repair() {
                 <div className="bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-3">
-                      <label
-                        className="block text-sm font-medium leading-6 text-gray-900"
-                      >
+                      <label className="block text-sm font-medium leading-6 text-gray-900">
                         First name
                       </label>
                       <input
@@ -84,9 +86,7 @@ function Repair() {
                     </div>
 
                     <div className="col-span-6 sm:col-span-3">
-                      <label
-                        className="block text-sm font-medium leading-6 text-gray-900"
-                      >
+                      <label className="block text-sm font-medium leading-6 text-gray-900">
                         Last name
                       </label>
                       <input
@@ -99,9 +99,7 @@ function Repair() {
                     </div>
 
                     <div className="col-span-6 sm:col-span-4">
-                      <label
-                        className="block text-sm font-medium leading-6 text-gray-900"
-                      >
+                      <label className="block text-sm font-medium leading-6 text-gray-900">
                         Contact information:Email/Phone
                       </label>
                       <input
@@ -150,10 +148,12 @@ function Repair() {
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                   <button
                     type="submit"
+                    onClick={notify}
                     className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                   >
                     Send
                   </button>
+                  <ToastContainer />
                 </div>
               </div>
             </form>

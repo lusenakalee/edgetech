@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom'
 import { Breadcrumbs } from "@material-tailwind/react";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 function Buy() {
+
+  const notify = () => toast("Email successfully sent ");
+
 
   const form = useRef();
 
@@ -154,11 +159,14 @@ function Buy() {
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                   <button
                     type="submit"
+                    onClick={notify}
                     className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                   >
                     Quote
                   </button>
                 </div>
+                <ToastContainer />
+
               </div>
             </form>
           </div>
