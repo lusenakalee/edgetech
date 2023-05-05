@@ -15,7 +15,7 @@ function Buy() {
 
     emailjs
       .sendForm(
-        "service_5dqrwks",
+        "service_sydr1zd",
         "template_idi44sc",
         form.current,
         "wLILNpMqLo0vim_Ko"
