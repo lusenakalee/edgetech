@@ -33,6 +33,8 @@ function Contact() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-white pb-5 sm:text-4xl">Let's Connect.</h2>
+        <div className ='py-2 text-white'>Precise Location: 1st floor room 19</div>
+
             <div><Map/></div>
             
             
